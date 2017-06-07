@@ -55,6 +55,7 @@ module DockerCookbook
                             opts[:ssl_ca_file] = tls_ca_cert if tls_ca_cert
                             opts[:client_cert] = tls_client_cert if tls_client_cert
                             opts[:client_key] = tls_client_key if tls_client_key
+                            opts[:proxy] = proxy if proxy
                           end
                           Docker::Connection.new(host || Docker.url, opts)
                         end

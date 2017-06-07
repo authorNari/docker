@@ -74,6 +74,7 @@ module DockerCookbook
     property :read_timeout, [Integer, nil], default: 60, desired_state: false
     property :write_timeout, [Integer, nil], desired_state: false
     property :running_wait_time, [Integer, nil], default: 20, desired_state: false
+    property :proxy, [String, nil], desired_state: false
 
     property :tls, [Boolean, nil], default: lazy { default_tls }, desired_state: false
     property :tls_verify, [Boolean, nil], default: lazy { default_tls_verify }, desired_state: false
